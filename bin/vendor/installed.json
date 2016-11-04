@@ -17,21 +17,19 @@
         ]
     },
     {
-        "packageName": "inchoo\/php7",
-        "version": "9999999-dev-9d32f37b567f0be1bf600d682ed67e1070f14179",
-        "installedFiles": [
-            "\/app\/code\/local\/Inchoo\/PHP7",
-            "\/app\/etc\/modules\/Inchoo_PHP7.xml",
-            "\/app\/code\/local\/Mage\/Connect\/Packager.php",
-            "\/app\/code\/local\/Mage\/Core\/Model\/File\/Uploader.php",
-            "\/app\/code\/local\/Mage\/Core\/Model\/Resource\/Session.php"
-        ]
-    },
-    {
         "packageName": "zookal\/harris-street-impex",
         "version": "9999999-dev-707b67f78b81778e98faff7f1710a2266d81c48f",
         "installedFiles": [
             "\/lib\/n98-magerun\/modules\/Zookal_HarrisStreetImpex"
+        ]
+    },
+    {
+        "packageName": "autofill\/product",
+        "version": "9999999-dev",
+        "installedFiles": [
+            "\/app\/code\/local\/Autofill\/Product",
+            "\/app\/etc\/modules\/Autofill_Product.xml",
+            "\/app\/design\/adminhtml\/default\/default\/layout\/autofill_product.xml"
         ]
     }
 ]

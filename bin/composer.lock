@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b51af9049be7ded6b35649328e463047",
-    "content-hash": "3547fd46db355bf368a7234cf2ea7563",
+    "hash": "c3fc47247a06de3c7200f47a7a1b2ffb",
+    "content-hash": "5348bda85522c3f4f0444917dd3999b6",
     "packages": [
         {
             "name": "aoepeople/aoe_scheduler",
@@ -51,6 +51,23 @@
                 "issues": "https://github.com/AOEpeople/Aoe_Scheduler/issues"
             },
             "time": "2016-07-20 02:00:04"
+        },
+        {
+            "name": "autofill/product",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../src/modules/Mercuriel/Intern",
+                "reference": "4d1575d984a337bf2794caad05aaa155c9b82f73",
+                "shasum": null
+            },
+            "require": {
+                "magento-hackathon/magento-composer-installer": "*"
+            },
+            "type": "magento-module",
+            "transport-options": {
+                "symlink": true
+            }
         },
         {
             "name": "eloquent/composer-config-reader",
@@ -213,39 +230,6 @@
                 "unit"
             ],
             "time": "2015-03-27 05:04:19"
-        },
-        {
-            "name": "inchoo/php7",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Inchoo/Inchoo_PHP7.git",
-                "reference": "9d32f37b567f0be1bf600d682ed67e1070f14179"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Inchoo/Inchoo_PHP7/zipball/9d32f37b567f0be1bf600d682ed67e1070f14179",
-                "reference": "9d32f37b567f0be1bf600d682ed67e1070f14179",
-                "shasum": ""
-            },
-            "require": {
-                "magento-hackathon/magento-composer-installer": "*"
-            },
-            "type": "magento-module",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ivan Čurdinjaković"
-                }
-            ],
-            "description": "PHP 7 compatibility extension for Magento 1 by Inchoo",
-            "support": {
-                "source": "https://github.com/Inchoo/Inchoo_PHP7/tree/master",
-                "issues": "https://github.com/Inchoo/Inchoo_PHP7/issues"
-            },
-            "time": "2016-10-04 12:13:19"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -492,16 +476,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.1.5",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "6cb0872fb57b38b3b09ff213c21ed693956b9eb0"
+                "reference": "c99da1119ae61e15de0e4829196b9fba6f73d065"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/6cb0872fb57b38b3b09ff213c21ed693956b9eb0",
-                "reference": "6cb0872fb57b38b3b09ff213c21ed693956b9eb0",
+                "url": "https://api.github.com/repos/symfony/console/zipball/c99da1119ae61e15de0e4829196b9fba6f73d065",
+                "reference": "c99da1119ae61e15de0e4829196b9fba6f73d065",
                 "shasum": ""
             },
             "require": {
@@ -549,11 +533,11 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-09-28 00:11:12"
+            "time": "2016-10-06 01:44:51"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.1.5",
+            "version": "v3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
@@ -708,7 +692,7 @@
     "stability-flags": {
         "aoepeople/aoe_scheduler": 20,
         "zookal/harris-street-impex": 20,
-        "inchoo/php7": 20
+        "autofill/product": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -3,16 +3,24 @@
     "aoepeople/aoe_scheduler": "dev-master",
     "zookal/harris-street-impex": "dev-master",
     "magento-ecg/coding-standard": "^2.0",
-    "inchoo/php7": "dev-master"
+    "autofill/product": "*@dev"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://packages.firegento.com"
+    },
+    {
+      "type": "path",
+      "url": "../src/modules/*/*",
+      "options": {
+        "symlink": true
+      }
     }
   ],
   "extra":{
     "magento-root-dir": "../src/magento/",
-    "auto-append-gitignore": true
+    "auto-append-gitignore": true,
+    "magento-deploystrategy": "symlink"
   }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Autofill_Product>
+            <version>0.1.0</version>
+        </Autofill_Product>
+    </modules>
+    <global>
+        <models>
+            <autofill_product>
+                <class>Autofill_Product_Model</class>
+                <resourceModel>autofill_product_resource</resourceModel>
+            </autofill_product>
+            <autofill_product_resource>
+                <class>Autofill_Product_Model_Resource</class>
+            </autofill_product_resource>
+        </models>
+        <blocks>
+            <autofill_product>
+                <class>Autofill_Product_Block</class>
+            </autofill_product>
+        </blocks>
+        <helpers>
+            <autofill_product>
+                <class>Autofill_Product_Helper</class>
+            </autofill_product>
+        </helpers>
+    </global>
+</config>
