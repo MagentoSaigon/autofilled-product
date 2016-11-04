@@ -1,0 +1,37 @@
+[
+    {
+        "packageName": "aoepeople\/aoe_scheduler",
+        "version": "9999999-dev-a170b8397a7fe1a846735a61764d79540cc3135e",
+        "installedFiles": [
+            "\/app\/code\/community\/Aoe\/Scheduler",
+            "\/app\/etc\/modules\/Aoe_Scheduler.xml",
+            "\/shell\/scheduler.php",
+            "\/app\/locale\/sv_SE\/Aoe_Scheduler.csv",
+            "\/app\/locale\/de_DE\/Aoe_Scheduler.csv",
+            "\/app\/locale\/en_US\/template\/email\/aoe_scheduler",
+            "\/app\/design\/adminhtml\/default\/default\/template\/aoe_scheduler",
+            "\/app\/design\/adminhtml\/default\/default\/layout\/aoe_scheduler",
+            "\/skin\/adminhtml\/default\/default\/aoe_scheduler",
+            "\/scheduler_cron.sh",
+            "\/dev\/tests\/aoe_scheduler"
+        ]
+    },
+    {
+        "packageName": "inchoo\/php7",
+        "version": "9999999-dev-9d32f37b567f0be1bf600d682ed67e1070f14179",
+        "installedFiles": [
+            "\/app\/code\/local\/Inchoo\/PHP7",
+            "\/app\/etc\/modules\/Inchoo_PHP7.xml",
+            "\/app\/code\/local\/Mage\/Connect\/Packager.php",
+            "\/app\/code\/local\/Mage\/Core\/Model\/File\/Uploader.php",
+            "\/app\/code\/local\/Mage\/Core\/Model\/Resource\/Session.php"
+        ]
+    },
+    {
+        "packageName": "zookal\/harris-street-impex",
+        "version": "9999999-dev-707b67f78b81778e98faff7f1710a2266d81c48f",
+        "installedFiles": [
+            "\/lib\/n98-magerun\/modules\/Zookal_HarrisStreetImpex"
+        ]
+    }
+]
