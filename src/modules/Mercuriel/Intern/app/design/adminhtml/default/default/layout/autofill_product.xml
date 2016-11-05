@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<config>
+    <adminhtml_autofill_index>
+        <reference name="content">
+            <block type="autofill_product/adminhtml_autofill" name="autofill.index"></block>
+        </reference>
+    </adminhtml_autofill_index>
+</config>

@@ -43,9 +43,9 @@
         <routers>
             <adminhtml>
                 <args>
-                    <module>
-                        <autofill_product after="Mage_Adminhtml">Autofill_Product_Adminhtml</autofill_product>
-                    </module>
+                    <modules>
+                        <autofill_product before="Mage_Adminhtml">Autofill_Product_Adminhtml</autofill_product>
+                    </modules>
                 </args>
             </adminhtml>
         </routers>

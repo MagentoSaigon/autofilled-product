@@ -9,6 +9,8 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
 {
     public function indexAction()
     {
-       die('asd');
+        $this->loadLayout();
+        $this->renderLayout();
+        return $this;
     }
 }
