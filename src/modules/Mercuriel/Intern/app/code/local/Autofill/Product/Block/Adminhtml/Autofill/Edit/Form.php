@@ -17,6 +17,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Form extends Mage_Adminhtml
                 'enctype' => 'multipart/form-data'
             )
         );
+        
         $form->setUseContainer(true);
 
 

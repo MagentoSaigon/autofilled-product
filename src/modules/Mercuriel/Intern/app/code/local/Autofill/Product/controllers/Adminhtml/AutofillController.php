@@ -12,7 +12,6 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
         $this->loadLayout();
         $this->renderLayout();
         return $this;
-
     }
     protected function _initAction()
     {
@@ -34,9 +33,10 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
             $model->setData($data);
         }
 
-        Mage::register('autofill_data_model', $model);
+        Mage::register('autofill_data', $model);
 
         $this->_initAction();
+
         $this->_title('Add New Autofill-Set');
 
         $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);

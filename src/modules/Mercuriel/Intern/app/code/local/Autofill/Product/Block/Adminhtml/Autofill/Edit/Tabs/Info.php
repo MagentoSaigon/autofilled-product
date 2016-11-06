@@ -15,6 +15,9 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
 
         $this->setForm($form);
 
+        $dataAttributeSet = Mage::getModel('autofill_product/autofill')
+            ->getAttributeSetNameForProduct();
+
         if (Mage::getSingleton('adminhtml/session')->getFormData())
         {
             $data = Mage::getSingleton('adminhtml/session')->getFormData();
@@ -33,6 +36,19 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
             'required' => true,
             'name' => 'name',
         ));
+        $fieldset->addField(
+            'attribute_set_id',
+            'select',
+            array(
+                'class'=>'required-entry',
+                'label' => Mage::helper('autofill_product')->__('Attribute Set Name '),
+                'required'=>true,
+                'name' => 'attribute_set_id',
+                'values' => Mage::getModel('autofill_product/autofill')->getAttributeSetNameForProduct()
+            )
+        );
+
+
 
         $form->setValues($data);
 

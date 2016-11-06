@@ -10,6 +10,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit extends Mage_Adminhtml_Bloc
     public function __construct()
     {
         parent::__construct();
+
         $this->_objectId = 'id';
 
         $this->_blockGroup = 'autofill_product';

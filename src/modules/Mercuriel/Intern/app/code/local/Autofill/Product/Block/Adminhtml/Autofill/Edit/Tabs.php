@@ -20,6 +20,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs extends Mage_Adminhtml
             
             'label' =>Mage::helper('autofill_product')->__('AutoFill-Set Infomation'),
             'title' =>Mage::helper('autofill_product')->__('AutoFill-Set Infomation'),
+
             'content' =>$this->getLayout()->createBlock('autofill_product/adminhtml_autofill_edit_tabs_info')->toHtml()
         ));
         
