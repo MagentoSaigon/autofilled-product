@@ -20,7 +20,7 @@ $table = $installer->getConnection()
         'primary'   => true,
     ), 'Id')
 
-    ->addColumn('attribut_set_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
+    ->addColumn('attribute_set_id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
         'nullable'  => false,
         'unsigned'  => true,
     ), 'Attribute Set Id')

@@ -35,10 +35,17 @@ class Autofill_Product_Block_Adminhtml_Autofill_Grid extends Mage_Adminhtml_Bloc
                 'sortable' => false,
             )
         );
-        $this->addColumn('attribute_id', array(
-                'header' => Mage::helper('autofill_product')->__('attribute id'),
+        $this->addColumn('name', array(
+                'header' => Mage::helper('autofill_product')->__('Name'),
                 'width' => 50,
-                'index' => 'attribute_id',
+                'index' => 'name',
+                'sortable' => false,
+            )
+        );
+        $this->addColumn('attribute_set_name', array(
+                'header' => Mage::helper('autofill_product')->__('Attr.Set Name'),
+                'width' => 50,
+                'index' => 'attribute_set_name',
                 'sortable' => false,
             )
         );
