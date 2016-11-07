@@ -79,4 +79,32 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
 
         $this->renderLayout();
     }
+    public function newFillAction()
+    {
+        $attributeSetId = $this->getRequest()->getParam('set');
+
+        $model = Mage::getModel('autofill_product/autofill')->load($attributeSetId);
+
+        $data = Mage::getSingleton('adminhtml/session')->getFormData(true);
+        if (!empty($data))
+        {
+            $model->setData($data);
+        }
+
+        Mage::register('autofill_data', $model);
+
+        $this->_initAction();
+
+        $this->_title('New Autofill-Set');
+
+        $this->getLayout()->getBlock('head')->setCanLoadExtJs(true);
+
+        $this->_addContent($this->getLayout()->createBlock('autofill_product/adminhtml_autofill_formfill'));
+
+        $this->_addLeft($this->getLayout()->createBlock('autofill_product/adminhtml_autofill_formfill_tabs'));
+
+        $this->renderLayout();
+
+    }
+
 }

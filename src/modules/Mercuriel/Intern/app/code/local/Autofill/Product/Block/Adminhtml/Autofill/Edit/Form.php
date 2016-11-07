@@ -20,7 +20,6 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Form extends Mage_Adminhtml
         
         $form->setUseContainer(true);
 
-
         $this->setForm($form);
 
         $form->setHtmlIdPrefix('autofill_');

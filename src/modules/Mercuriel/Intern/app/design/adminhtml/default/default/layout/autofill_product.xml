@@ -12,6 +12,7 @@
             <block type="autofill_product/adminhtml_autofill" name="autofill_index"></block>
         </reference>
     </adminhtml_autofill_index>
+
     <adminhtml_autofill_edit>
         <reference name="content">
             <block type="autofill_product/adminhtml_autofill_edit" name="autofill_edit"></block>

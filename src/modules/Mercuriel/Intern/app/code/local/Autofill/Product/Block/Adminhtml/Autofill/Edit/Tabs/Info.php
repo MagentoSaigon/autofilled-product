@@ -72,7 +72,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
     }
     public function getContinue()
     {
-        return $this->getUrl('*/*/new/', array(
+        return $this->getUrl('*/*/newFill/', array(
             '_current'  => true,
             'set'       => '{{attribute_set}}',
         ));
