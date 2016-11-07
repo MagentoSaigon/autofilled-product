@@ -19,8 +19,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit extends Mage_Adminhtml_Bloc
 
         $this->_mode = 'edit';
 
-        $this->_updateButton('save', 'label',
-            Mage::helper('autofill_product')->__('Save AutoFill-Set'));
+        $this->_removeButton('save');
 
         $this->_updateButton('delete', 'label',
 

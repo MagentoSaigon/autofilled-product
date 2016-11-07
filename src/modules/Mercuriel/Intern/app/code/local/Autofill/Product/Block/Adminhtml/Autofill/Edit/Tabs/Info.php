@@ -7,6 +7,20 @@
  */
 class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Adminhtml_Block_Widget_Form
 {
+    protected function _prepareLayout()
+    {
+        $this->setChild('continue_button',
+            $this->getLayout()->createBlock('adminhtml/widget_button')
+                ->setData(array(
+                    'label'     => Mage::helper('autofill_product')->__('Continue'),
+                    'class'     => 'save',
+                    'onclick'   => "setSettings('".$this->getContinue()."','attribute_set_id')",
+                    'class' => 'add'
+                ))
+        );
+
+        return parent::_prepareLayout();
+    }
     protected function _prepareForm()
     {
         $form = new Varien_Data_Form();
@@ -15,14 +29,13 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
 
         $this->setForm($form);
 
-        $dataAttributeSet = Mage::getModel('autofill_product/autofill')
-            ->getAttributeSetNameForProduct();
-
         if (Mage::getSingleton('adminhtml/session')->getFormData())
         {
             $data = Mage::getSingleton('adminhtml/session')->getFormData();
             Mage::getSingleton('adminhtml/session')->setFormData(null);
-        }elseif(Mage::registry('autofill_data'))
+
+        }
+        elseif(Mage::registry('autofill_data'))
         {
             $data = Mage::registry('autofill_data')->getData();
         }
@@ -40,18 +53,28 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
             'attribute_set_id',
             'select',
             array(
-                'class'=>'required-entry',
+                'class'=>'validate-select',
                 'label' => Mage::helper('autofill_product')->__('Attribute Set Name '),
                 'required'=>true,
-                'name' => 'attribute_set_id',
+                'name' => 'set',
                 'values' => Mage::getModel('autofill_product/autofill')->getAttributeSetNameForProduct()
             )
         );
+        $fieldset->addField('continue_button', 'note', array(
+            'text' => $this->getChildHtml('continue_button'),
+        ));
 
 
 
         $form->setValues($data);
 
         return parent::_prepareForm();
+    }
+    public function getContinue()
+    {
+        return $this->getUrl('*/*/new/', array(
+            '_current'  => true,
+            'set'       => '{{attribute_set}}',
+        ));
     }
 }

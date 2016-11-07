@@ -9,16 +9,15 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
 {
     public function indexAction()
     {
-        $this->loadLayout();
+        $this->loadLayout()
+            ->_setActiveMenu('catalog');
         $this->renderLayout();
         return $this;
     }
     protected function _initAction()
     {
-        $this
-            ->loadLayout()
-            ->_setActiveMenu('catalog')
-        ;
+        $this->loadLayout()
+            ->_setActiveMenu('catalog');
         return $this;
     }
     public function newAction()

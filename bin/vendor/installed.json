@@ -29,7 +29,9 @@
         "installedFiles": [
             "\/app\/code\/local\/Autofill\/Product",
             "\/app\/etc\/modules\/Autofill_Product.xml",
-            "\/app\/design\/adminhtml\/default\/default\/layout\/autofill_product.xml"
+            "\/app\/design\/adminhtml\/default\/default\/layout\/autofill_product.xml",
+            "\/app\/design\/adminhtml\/default\/default\/template\/Autofill\/js.phtml",
+            "\/js\/autofill\/autofill.js"
         ]
     }
 ]
