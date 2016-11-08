@@ -3,7 +3,7 @@
     <default>
         <reference name="head">
             <action method="addJs">
-                <script>autofill/autofill.js </script>
+                <script>autofill/autofill.js</script>
             </action>
         </reference>
     </default>
@@ -18,4 +18,10 @@
             <block type="autofill_product/adminhtml_autofill_edit" name="autofill_edit"></block>
         </reference>
     </adminhtml_autofill_edit>
+    <adminhtml_autofill_newfill>
+        <reference name="js">
+            <block type="adminhtml/catalog_product_edit_js" template="catalog/product/js.phtml" name="catalog_product_js"></block>
+            <block type="core/template" template="catalog/wysiwyg/js.phtml"/>
+        </reference>
+    </adminhtml_autofill_newfill>
 </config>
