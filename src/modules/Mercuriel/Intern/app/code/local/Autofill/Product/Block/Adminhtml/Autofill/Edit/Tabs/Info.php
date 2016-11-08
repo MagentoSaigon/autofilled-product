@@ -14,7 +14,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
                 ->setData(array(
                     'label'     => Mage::helper('autofill_product')->__('Continue'),
                     'class'     => 'save',
-                    'onclick'   => "setSettings('".$this->getContinue()."','attribute_set_id')",
+                    'onclick'   => "setSettings('".$this->getContinue()."','attribute_set_id','name-auto-fill')",
                     'class' => 'add'
                 ))
         );
@@ -43,7 +43,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
 
             array('legend'=>Mage::helper('autofill_product')->__('Edit Set Name')));
 
-        $fieldset->addField('name', 'text', array(
+        $fieldset->addField('name-auto-fill', 'text', array(
             'label' => Mage::helper('autofill_product')->__('Name'),
             'class' => 'required-entry',
             'required' => true,
@@ -75,6 +75,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Edit_Tabs_Info extends Mage_Admi
         return $this->getUrl('*/*/newFill/', array(
             '_current'  => true,
             'set'       => '{{attribute_set}}',
+            'name'      =>  '{{name}}'
         ));
     }
 }

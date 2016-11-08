@@ -83,6 +83,21 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
     }
     public function newFillAction()
     {
+        $setId = $this->getRequest()->getParam('set');
+
+        $name = $this->getRequest()->getParam('name');
+
+        if(Mage::getModel('core/session')->getAutofillName() || Mage::getModel('core/session')->getAttrSetId() )
+        {
+            Mage::getModel('core/session')->unsAutofillName();
+
+            Mage::getModel('core/session')->unsAttrSetId();
+        }
+
+        Mage::getModel('core/session')->setAutofillName($name);
+
+        Mage::getModel('core/session')->setAttrSetId($setId);
+
         $product = $this->_initProduct();
 
         Mage::dispatchEvent('catalog_product_new_action', array('product' => $product));
@@ -112,6 +127,48 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
 
         $this->renderLayout();
 
+    }
+    public function saveAction()
+    {
+        $nameAutoFill =  Mage::getModel('core/session')->getAutofillName();
+
+        $setId =  Mage::getModel('core/session')->getAttrSetId();
+
+        $attrSetName = Mage::getModel('eav/entity_attribute_set')->load($setId);
+
+        $data = $this->getRequest()->getPost();
+
+        $model = Mage::getModel('autofill_product/autofill');
+
+        foreach($data['product'] as $k=>$v)
+        {
+            $attributeId = Mage::getResourceModel('eav/entity_attribute')
+                ->getIdByCode('catalog_product', $k);
+
+            $data = array(
+                'name' => $nameAutoFill,
+                'attribute_set_id'=> $setId,
+                'attribute_id'=>$attributeId,
+                'attribute_set_name' =>$attrSetName['attribute_set_name'],
+                'value' =>$v
+            );
+            $setModel = $model->setData($data);
+            try{
+                $setModel->save();
+            }
+            catch (Exception $e)
+            {
+                Mage::logException($e);
+            }
+        }
+        if($setModel->save())
+        {
+            Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('autofill_product')
+                ->__('AutoFill-Set was successfully saved.'));
+        }
+        Mage::getModel('core/session')->unsAutofillName();
+        Mage::getModel('core/session')->unsAttrSetId();
+        $this->_redirect('*/*/');
     }
 
     protected function _initProduct()

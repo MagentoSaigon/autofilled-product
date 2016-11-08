@@ -17,7 +17,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Formfill_Tabs extends Mage_Admin
     }
     public function _prepareLayout()
     {
-        
+
         $setId = $this->getRequest()->getParam('set');
 
         if($setId)
@@ -26,6 +26,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Formfill_Tabs extends Mage_Admin
                 ->setAttributeSetFilter($setId)
                 ->setSortOrder()
                 ->load();
+
             foreach ($groupCollection as $group)
             {
                 if($group->getAttributeGroupName()== "General")
