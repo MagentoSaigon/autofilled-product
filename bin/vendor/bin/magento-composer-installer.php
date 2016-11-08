@@ -1,5 +1,0 @@
-XSym
-0082
-67302b10a6eb64c599f7c742fa7f2253
-../magento-hackathon/magento-composer-installer/bin/magento-composer-installer.php
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
