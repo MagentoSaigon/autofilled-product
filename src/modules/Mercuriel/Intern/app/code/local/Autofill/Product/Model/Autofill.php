@@ -16,7 +16,6 @@ class Autofill_Product_Model_Autofill extends Mage_Core_Model_Abstract
         $attributeSetCollection = Mage::getModel('eav/entity_attribute_set')->getCollection()
             ->addFieldToFilter('entity_type_id',4);
 
-
         foreach($attributeSetCollection as $attributeSet)
         {
             $data[] = array(
@@ -24,7 +23,6 @@ class Autofill_Product_Model_Autofill extends Mage_Core_Model_Abstract
                 'label' => Mage::helper('autofill_product')->__($attributeSet['attribute_set_name']),
             );
         }
-
         return $data;
     }
 }

@@ -93,7 +93,7 @@ class Autofill_Product_Adminhtml_AutofillController extends Mage_Adminhtml_Contr
 
             Mage::getModel('core/session')->unsAttrSetId();
         }
-
+        
         Mage::getModel('core/session')->setAutofillName($name);
 
         Mage::getModel('core/session')->setAttrSetId($setId);

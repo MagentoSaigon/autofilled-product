@@ -22,6 +22,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Grid extends Mage_Adminhtml_Bloc
     protected function _prepareCollection()
     {
         $collection = Mage::getModel('autofill_product/autofill')->getCollection();
+        $collection->getSelect()->group("attribute_set_name");
         $this->setCollection($collection);
         return parent::_prepareCollection();
     }

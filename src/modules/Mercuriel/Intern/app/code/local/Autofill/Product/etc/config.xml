@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Autofill_Product>
-            <version>0.1.1</version>
+            <version>0.1.0</version>
         </Autofill_Product>
     </modules>
     <global>
@@ -17,6 +17,9 @@
                     <autofill_product>
                         <table>autofill_product</table>
                     </autofill_product>
+                    <autofill_info>
+                        <table>autofill_info</table>
+                    </autofill_info>
                 </entities>
             </autofill_product_resource>
         </models>

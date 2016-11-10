@@ -17,9 +17,7 @@ class Autofill_Product_Block_Adminhtml_Autofill_Formfill_Tabs extends Mage_Admin
     }
     public function _prepareLayout()
     {
-
         $setId = $this->getRequest()->getParam('set');
-
         if($setId)
         {
             $groupCollection = Mage::getResourceModel('eav/entity_attribute_group_collection')
