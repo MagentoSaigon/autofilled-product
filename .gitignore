@@ -1,0 +1,4 @@
+bin/vendor/*
+src/magento/*
+.idea/*
+bin/bin/*

@@ -1,0 +1,13 @@
+{
+  "name":"mercuriel/test",
+  "type":"magento-module",
+  "author":[
+    {
+      "name":"Hoang",
+      "email":"maihoang626@gmail.com"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}
