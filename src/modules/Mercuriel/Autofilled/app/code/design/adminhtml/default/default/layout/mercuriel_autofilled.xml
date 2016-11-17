@@ -1,4 +1,8 @@
 <?xml version="1.0" ?>
-<layout>
-
-</layout>
+<config>
+    <adminhtml_autofilled_index>
+        <reference name="content">
+            <block type="mercuriel_autofilled/adminhtml_autofill" name="autofill_index" />
+        </reference>
+    </adminhtml_autofilled_index>
+</config>

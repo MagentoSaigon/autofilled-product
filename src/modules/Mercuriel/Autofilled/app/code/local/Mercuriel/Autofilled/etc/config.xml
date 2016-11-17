@@ -57,11 +57,19 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <mercuriel_autofilled before="Mage_Adminhtml">Mercuriel_Autofilled_Adminhtml
-                        </mercuriel_autofilled>
+                        <mercuriel_autofilled before="Mage_Adminhtml">Mercuriel_Autofilled_Adminhtml</mercuriel_autofilled>
                     </modules>
                 </args>
             </adminhtml>
         </routers>
     </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <mercuriel_autofilled>
+                    <file>mercuriel_autofilled.xml</file>
+                </mercuriel_autofilled>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

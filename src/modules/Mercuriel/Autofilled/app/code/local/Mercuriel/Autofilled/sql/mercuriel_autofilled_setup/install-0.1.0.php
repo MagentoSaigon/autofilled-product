@@ -54,6 +54,10 @@ $table = $installer->getConnection()
         'nullable'  => false,
         'unsigned'  => true,
     ), 'Autofill Value')
+    ->addColumn('autofill_set_name', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
+        'nullable'  => false,
+        'unsigned'  => true,
+    ), 'Autofill Set Name')
 ;
 
 $installer->getConnection()->createTable($table);

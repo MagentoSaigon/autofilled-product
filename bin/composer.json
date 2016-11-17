@@ -3,8 +3,9 @@
     "zookal/harris-street-impex": "dev-master",
     "magento-ecg/coding-standard": "^2.0",
     "inchoo/php7": "dev-master",
-    "mercuriel/autofilled": "*@dev",
-    "aoepeople/aoe_scheduler": "^1.5"
+    "aoepeople/aoe_scheduler": "^1.5",
+    "phpspec/phpspec": "~2.3.0",
+    "mercuriel/autofilled": "*@dev"
   },
   "repositories": [
     {
