@@ -2,3 +2,4 @@ bin/vendor/*
 src/magento/*
 .idea/*
 bin/bin/*
+bin/composer.lock

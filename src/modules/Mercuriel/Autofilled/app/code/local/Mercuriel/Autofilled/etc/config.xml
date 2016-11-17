@@ -5,6 +5,17 @@
             <version>0.1.0</version>
         </Mercuriel_Autofilled>
     </modules>
+    <frontend>
+        <routers>
+            <mercuriel_autofilled>
+                <use>standard</use>
+                <args>
+                    <module>Mercuriel_Autofilled</module>
+                    <frontName>autofilled</frontName>
+                </args>
+            </mercuriel_autofilled>
+        </routers>
+    </frontend>
     <global>
         <models>
             <mercuriel_autofilled>
@@ -41,4 +52,16 @@
             </mercuriel_autofilled>
         </helpers>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <mercuriel_autofilled before="Mage_Adminhtml">Mercuriel_Autofilled_Adminhtml
+                        </mercuriel_autofilled>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>
