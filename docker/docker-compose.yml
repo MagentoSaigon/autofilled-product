@@ -17,7 +17,7 @@ services:
         PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/www/bin
   db_server:
     ports:
-     - "3306:3306"
+     - "3307:3306"
     container_name: db_server
     image: mariadb
     environment:
