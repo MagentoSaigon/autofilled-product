@@ -5,7 +5,10 @@
     "inchoo/php7": "dev-master",
     "aoepeople/aoe_scheduler": "^1.5",
     "phpspec/phpspec": "~2.3.0",
-    "mercuriel/autofilled": "*@dev"
+    "mercuriel/autofilled": "*@dev",
+    "mercuriel/smartreindex": "*@dev",
+    "behat/behat": "~2.5",
+    "kalenjordan/magerun-addons": "dev-master"
   },
   "repositories": [
     {
