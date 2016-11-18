@@ -3,7 +3,6 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
 {
     public function indexAction()
     {
-
         $this->loadLayout();
         $this->renderLayout();
         return $this;
@@ -11,9 +10,17 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
     public function editAction()
     {
         $id = $this->getRequest()->getParam('id',null);;
-        $autofill = Mage::getModel('mercuriel_autofill/autofillGroup');
+        $autofill = Mage::getResourceModel('mercuriel_autofill/autofillGroup_collection');
         if($id){
-            $autofill -> load((int)$id);
+            $autofill->getSelect()
+                ->join('eav_attribute_group',
+                    'eav_attribute_group.attribute_group_id = main_table.attribute_group_id',
+                    array('attribute_group_name','attribute_set_id'))
+                ->join('eav_attribute_set',
+                    'eav_attribute_set.attribute_set_id = eav_attribute_group.attribute_set_id',
+                    array('attribute_set_name'));
+            $autofill = $autofill->addFieldToFilter('autofill_group_id', $id)->getFirstItem();
+
             if($autofill->getId()){
                 $data = Mage::getSingleton('adminhtml/session')->getFormData(true);
             }
