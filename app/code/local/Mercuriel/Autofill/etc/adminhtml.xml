@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<config>
+    <menu>
+        <autofill translate="title" module="mercuriel_autofill">
+            <title>Auto Fill Attribute</title>
+            <sort_order>45</sort_order>
+            <children>
+                <valueset translate="label" module="mercuriel_autofill">
+                    <title>Auto Fill Value Set</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/autofill</action>
+                </valueset>
+            </children>
+        </autofill>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <autofill translate="title" module="mercuriel_autofill">
+                        <title>Autofill</title>
+                        <sort_order>300</sort_order>
+                        <children>
+                            <valueset translate="title" module="mercuriel_autofill">
+                                <title>Value Set</title>
+                                <sort_order>0</sort_order>
+                            </valueset>
+                        </children>
+                    </autofill>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

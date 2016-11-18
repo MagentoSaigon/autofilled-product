@@ -1,0 +1,11 @@
+{
+	"name": "mercuriel/autofill",
+	"type": "magento-module",
+	"author":[]
+		"name": "Tai Dinh",
+		"email": "dttai.ityu@gmail.com"
+	],
+	"require":{
+		"magento-hackathon/magento-composer-installer": "*"
+	}
+}

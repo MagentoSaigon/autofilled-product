@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+    <adminhtml_autofill_index>
+        <reference name="content">
+            <block type="mercuriel_autofill/adminhtml_autofill"></block>
+        </reference>
+    </adminhtml_autofill_index>
+    <adminhtml_autofill_edit>
+        <reference name="content">
+            <block type="mercuriel_autofill/adminhtml_autofill_edit" name="auto_fill_edit"/>
+        </reference>
+    </adminhtml_autofill_edit>
+</layout>
