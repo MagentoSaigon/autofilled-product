@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<config>
+    <adminhtml_autofill_index>
+        <reference name="content">
+            <block type="training_autofill/adminhtml_autofill" name="autofill_index"></block>
+        </reference>
+    </adminhtml_autofill_index>
+
+    <adminhtml_autofill_edit>
+        <reference name="content">
+            <block type="training_autofill/adminhtml_autofill_edit" name="autofill_edit"></block>
+        </reference>
+    </adminhtml_autofill_edit>
+</config>
