@@ -1,5 +1,0 @@
-app/code/local/Autofill/* app/code/local/Autofill
-app/etc/modules/Autofill_Product.xml   app/etc/modules/Autofill_Product.xml
-app/design/adminhtml/default/default/layout/autofill_product.xml   app/design/adminhtml/default/default/layout/autofill_product.xml
-app/design/adminhtml/default/default/template/Autofill/*    app/design/adminhtml/default/default/template/Autofill
-js/autofill/autofill.js js/autofill/autofill.js

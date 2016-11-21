@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Autofill_Product>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Autofill_Product>
-    </modules>
-</config>
