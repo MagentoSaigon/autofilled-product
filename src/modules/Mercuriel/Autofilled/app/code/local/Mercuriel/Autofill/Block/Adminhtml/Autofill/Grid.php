@@ -1,16 +1,16 @@
 <?php
-class Mercuriel_Autofilled_Block_Adminhtml_Autofill_Grid extends Mage_Adminhtml_Block_Widget_Grid{
+class Mercuriel_Autofill_Block_Adminhtml_Autofill_Grid extends Mage_Adminhtml_Block_Widget_Grid{
     public function __construct()
     {
         parent::__construct();
         $this->setId('autofill_id');
-        $this->setDefaultSort('id');
+        $this->setDefaultSort('autofill_id');
         $this->setDefaultDir('DESC');
         $this->setSaveParametersInSession(true);
     }
     protected function _prepareCollection()
     {
-        $collection = Mage::getModel('mercuriel_autofilled/attribute')->getCollection();
+        $collection = Mage::getModel('mercuriel_autofill/autofill')->getCollection();
         $collection->getSelect()->group("autofill_set_name");
         $this->setCollection($collection);
         return parent::_prepareCollection();
@@ -19,21 +19,21 @@ class Mercuriel_Autofilled_Block_Adminhtml_Autofill_Grid extends Mage_Adminhtml_
     protected function _prepareColumns()
     {
         $this->addColumn('id',array(
-            'header' => Mage::helper('mercuriel_autofilled')->__('Id'),
+            'header' => Mage::helper('mercuriel_autofill')->__('Id'),
             'width' => 50,
             'index' => 'id',
             'sortable' => false,
         ));
 
         $this->addColumn('name',array(
-            'header' => Mage::helper('mercuriel_autofilled')->__('Name'),
+            'header' => Mage::helper('mercuriel_autofill')->__('Name'),
             'width' => 50,
             'index' => 'id',
             'sortable' => false,
         ));
 
         $this->addColumn('attribute_set_name',array(
-            'header' => Mage::helper('mercuriel_autofilled')->__('Attribute Set Name'),
+            'header' => Mage::helper('mercuriel_autofill')->__('Attribute Set Name'),
             'width' => 50,
             'index' => 'id',
             'sortable' => false,

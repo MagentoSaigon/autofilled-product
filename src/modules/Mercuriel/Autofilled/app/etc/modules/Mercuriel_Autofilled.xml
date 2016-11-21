@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config>
-    <modules>
-        <Mercuriel_Autofilled>
-            <active>true</active>
-            <codePool>local</codePool>
-        </Mercuriel_Autofilled>
-    </modules>
-</config>

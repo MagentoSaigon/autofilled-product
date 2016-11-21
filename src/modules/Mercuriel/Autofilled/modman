@@ -1,2 +1,2 @@
-app/code/local/Mercuriel/Autofilled/*  app/code/local/Mercuriel/Autofilled
-app/etc/modules/Mercuriel_Autofilled.xml app/etc/modules/Mercuriel_Autofilled.xml
+app/code/local/Mercuriel/Autofill/*  app/code/local/Mercuriel/Autofill
+app/etc/modules/Mercuriel_Autofill.xml app/etc/modules/Mercuriel_Autofill.xml

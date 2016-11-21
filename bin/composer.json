@@ -1,14 +1,12 @@
 {
   "require": {
     "zookal/harris-street-impex": "dev-master",
-    "magento-ecg/coding-standard": "^2.0",
-    "inchoo/php7": "dev-master",
     "aoepeople/aoe_scheduler": "^1.5",
     "phpspec/phpspec": "~2.3.0",
-    "mercuriel/autofilled": "*@dev",
     "mercuriel/smartreindex": "*@dev",
     "behat/behat": "~2.5",
-    "kalenjordan/magerun-addons": "dev-master"
+    "kalenjordan/magerun-addons": "dev-master",
+    "mercuriel/autofill": "*@dev"
   },
   "repositories": [
     {
@@ -21,10 +19,6 @@
       "options": {
         "symlink": true
       }
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/monsieurbiz/Mbiz_Setup"
     }
   ],
   "extra":{
@@ -45,9 +39,5 @@
       "../src/magento/app/code/core",
       "../src/magento/lib"
     ]
-  }},
-  "require-dev": {
-    "phpunit/phpunit": "^5.5"
-  },
-  "minimum-stability": "dev"
+  }}
 }
