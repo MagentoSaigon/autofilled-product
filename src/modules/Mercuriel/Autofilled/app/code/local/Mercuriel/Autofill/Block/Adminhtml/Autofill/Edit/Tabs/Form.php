@@ -7,7 +7,7 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit_Tabs_Form extends Mage_Ad
         $fieldset = $form->addFieldset('autofill_form', array('legend'=>Mage::helper('mercuriel_autofill')->__('Item information')));
 
         $fieldset->addField('title', 'text', array(
-            'label'     => Mage::helper('form')->__('Title'),
+            'label'     => Mage::helper('mercuriel_autofill')->__('Title'),
             'class'     => 'required-entry',
             'required'  => true,
             'name'      => 'title',

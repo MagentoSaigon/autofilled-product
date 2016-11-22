@@ -18,8 +18,8 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
     public function newAction()
     {
         $this->loadLayout();
-        $this->_addContent($this->getLayout()->createBlock('mercuriel_autofill/adminhtml_autofill_edit'));
-            //->_addLeft($this->getLayout()->createBlock('mercuriel_autofill/adminhtml_autofill_edit_tabs'));
+        $this->_addContent($this->getLayout()->createBlock('mercuriel_autofill/adminhtml_autofill_edit'))
+            ->_addLeft($this->getLayout()->createBlock('mercuriel_autofill/adminhtml_autofill_edit_tabs'));
         $this->renderLayout();
     }
 }
