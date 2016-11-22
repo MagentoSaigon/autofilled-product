@@ -28,17 +28,21 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Grid extends Mage_Adminhtml_Bl
         $this->addColumn('name',array(
             'header' => Mage::helper('mercuriel_autofill')->__('Name'),
             'width' => 50,
-            'index' => 'id',
+            'index' => 'name',
             'sortable' => false,
         ));
 
         $this->addColumn('attribute_set_name',array(
             'header' => Mage::helper('mercuriel_autofill')->__('Attribute Set Name'),
             'width' => 50,
-            'index' => 'id',
+            'index' => 'attribute_set_name',
             'sortable' => false,
         ));
 
         return parent::_prepareColumns();
+    }
+
+    public function getRowUrl($row){
+        return $this->getUrl('*/*/edit', array('id' => $row->getId()));
     }
 }
