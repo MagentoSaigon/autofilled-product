@@ -7,14 +7,10 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit extends Mage_Adminhtml_Bl
         $this->_blockGroup = 'mercuriel_autofill';
         $this->_controller = 'adminhtml_autofill';
 
-        $this->_updateButton('save', 'label', Mage::helper('mercuriel_autofill')->__('Save Item'));
-        $this->_updateButton('delete', 'label', Mage::helper('mercuriel_autofill')->__('Delete Item'));
+        $this->_updateButton('save', 'label',Mage::helper('mercuriel_autofill')->__('Save Attribute'));
     }
 
     public function getHeaderText(){
-        if(Mage::registry('autofill_data') && Mage::registry('autofill_data')->getId())
-            return Mage::helper('autofill_product')->__("Edit Auto-fill Set '%s'",
-                $this->htmlEscape(Mage::registry('autofill_data')->getTitle()));
-        return Mage::helper('mercuriel_autofill')->__('Add New Auto-fill Set');
+        return Mage::helper('mercuriel_autofill')->__('Add new attribute');
     }
 }

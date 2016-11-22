@@ -8,8 +8,8 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill extends Mage_Adminhtml_Block_W
 
         $this->_headerText = Mage::helper('mercuriel_autofill')->__('Attribute Auto-Fill Set');
 
+        $this->_addButtonLabel = Mage::helper('mercuriel_autofill')->__('Add Attribute');
+
         parent::__construct();
-        
-        $this->_addButtonLabel = Mage::helper('mercuriel_autofill')->__('Add New Auto-fill Set');
     }
 }

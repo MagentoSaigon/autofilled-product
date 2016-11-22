@@ -1,2 +1,3 @@
 app/code/local/Mercuriel/Autofill/*  app/code/local/Mercuriel/Autofill
 app/etc/modules/Mercuriel_Autofill.xml app/etc/modules/Mercuriel_Autofill.xml
+app/code/design/adminhtml/default/default/layout/mercuriel_autofill.xml app/code/design/adminhtml/default/default/layout/mercuriel_autofill.xml
