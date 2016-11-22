@@ -22,5 +22,12 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
             ->_addLeft($this->getLayout()->createBlock('mercuriel_autofill/adminhtml_autofill_edit_tabs'));
         $this->renderLayout();
     }
+
+    public function saveAction(){
+        $param = $this->getRequest()->getParam('attribute_set_name');
+        print_r($param);
+        /*$model = Mage::getModel('mercuriel_autofill/autofill');
+        $model->setAutofillSetName($param);*/
+    }
 }
 ?>

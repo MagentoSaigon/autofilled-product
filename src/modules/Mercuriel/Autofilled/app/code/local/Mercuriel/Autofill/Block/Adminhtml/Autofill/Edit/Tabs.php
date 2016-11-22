@@ -9,8 +9,8 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit_Tabs extends Mage_Adminht
 
     protected function _beforeToHtml(){
         $this->addTab('form_section', array(
-            'label'  => Mage::helper('mercuriel_autofill')->__('Item Information'),
-            'title'  => Mage::helper('mercuriel_autofill')->__('Item Information'),
+            'label'  => Mage::helper('mercuriel_autofill')->__('Attribute Set Information'),
+            'title'  => Mage::helper('mercuriel_autofill')->__('Attribute Set Information'),
             'content'    => $this->getLayout()->createBlock('mercuriel_autofill/adminhtml_autofill_edit_tabs_form')->toHtml(),
         ));
         return parent::_beforeToHtml();
