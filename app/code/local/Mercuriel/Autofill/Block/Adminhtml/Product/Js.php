@@ -28,9 +28,12 @@ class Mercuriel_Autofill_Block_Adminhtml_Product_Js extends Mage_Core_Block_Temp
     public function getAutofillJsArray(){
         $autofillValueDatas = $this->getAutofillData();
         $string = "{";
+        $flag1 = false;
         foreach($autofillValueDatas as $key => $autofillValueData){
-            $flag1 = false;
-            if($flag1){$string .= ',';}
+            if($flag1)
+            {
+                $string .= ',';
+            }
             $string .= $key.":{";
             $flag2 = false;
             foreach($autofillValueData as $key => $value){

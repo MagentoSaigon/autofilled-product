@@ -7,7 +7,6 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit extends Mage_Adminhtml_Bl
         $this->_blockGroup = 'mercuriel_autofill';
         $this->_controller = 'adminhtml_autofill';
         $this->_mode = 'edit';
-        //Change the label of the button
         $this->_updateButton('save'     , 'label', Mage::helper('mercuriel_autofill')->__('Save Autofill Set'));
         $this->_updateButton('delete'   , 'label', Mage::helper('mercuriel_autofill')->__('Delete Autofill Set'));
     }

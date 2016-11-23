@@ -68,15 +68,6 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit_Form extends Mage_Adminht
                     case 'weight':
                     case '':
                         break;
-//                    case 'boolean':
-//                        $fieldset1->addField($autofillValue['attribute_code'], 'select', array(
-//                            'label' => Mage::helper('mercuriel_autofill')->__($autofillValue['frontend_label']),
-//                            'class' => '',
-//                            'name' => $autofillValue['attribute_code'],
-//                            'options' => Mage::getModel('adminhtml/system_config_source_yesno')->toOptionArray()
-//                        ));
-//
-//                        break;
                     case 'select':
                         $a = array(
                             'label' => Mage::helper('mercuriel_autofill')->__($autofillValue['frontend_label']),
@@ -106,7 +97,7 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit_Form extends Mage_Adminht
             $fieldset->addField('attribute_set_id', 'select', array(
                 'label' => Mage::helper('catalog')->__('Attribute Set'),
                 'title' => Mage::helper('catalog')->__('Attribute Set'),
-                'name'  => 'set',
+                'name'  => 'attribute_set_id',
                 'value' => $entityType->getDefaultAttributeSetId(),
                 'values'=> Mage::getResourceModel('eav/entity_attribute_set_collection')
                     ->setEntityTypeFilter($entityType->getId())
