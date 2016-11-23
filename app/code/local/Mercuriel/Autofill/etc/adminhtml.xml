@@ -1,32 +1,36 @@
 <?xml version="1.0" ?>
 <config>
     <menu>
-        <autofill translate="title" module="mercuriel_autofill">
-            <title>Auto Fill Attribute</title>
-            <sort_order>45</sort_order>
+        <catalog>
             <children>
-                <valueset translate="label" module="mercuriel_autofill">
-                    <title>Auto Fill Value Set</title>
-                    <sort_order>1</sort_order>
-                    <action>adminhtml/autofill</action>
-                </valueset>
+                <attributes>
+                    <children>
+                        <autofill translate="title" module="mercuriel_autofill">
+                            <title>Add New Auto-fill Set</title>
+                            <sort_order>50</sort_order>
+                            <action>adminhtml/autofill/index</action>
+                        </autofill>
+                    </children>
+                </attributes>
             </children>
-        </autofill>
+        </catalog>
     </menu>
     <acl>
         <resources>
             <admin>
                 <children>
-                    <autofill translate="title" module="mercuriel_autofill">
-                        <title>Autofill</title>
-                        <sort_order>300</sort_order>
+                    <catalog>
                         <children>
-                            <valueset translate="title" module="mercuriel_autofill">
-                                <title>Value Set</title>
-                                <sort_order>0</sort_order>
-                            </valueset>
+                            <attributes>
+                                <children>
+                                    <autofill translate="title" module="mercuriel_autofill">
+                                        <title>Manage Autofill Set</title>
+                                        <sort_order>300</sort_order>
+                                    </autofill>
+                                </children>
+                            </attributes>
                         </children>
-                    </autofill>
+                    </catalog>
                 </children>
             </admin>
         </resources>

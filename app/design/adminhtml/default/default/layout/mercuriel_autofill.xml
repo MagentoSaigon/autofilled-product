@@ -1,13 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0"  ?>
 <layout>
     <adminhtml_autofill_index>
         <reference name="content">
-            <block type="mercuriel_autofill/adminhtml_autofill"></block>
+            <block type="mercuriel_autofill/adminhtml_autofill"
+                   name="autofilll_grid"></block>
         </reference>
     </adminhtml_autofill_index>
     <adminhtml_autofill_edit>
         <reference name="content">
-            <block type="mercuriel_autofill/adminhtml_autofill_edit" name="auto_fill_edit"/>
+            <block type="mercuriel_autofill/adminhtml_autofill_edit"></block>
         </reference>
     </adminhtml_autofill_edit>
+    <adminhtml_autofill_new>
+        <reference name="content">
+            <block type="mercuriel_autofill/adminhtml_autofill_edit"></block>
+        </reference>
+    </adminhtml_autofill_new>
+    <adminhtml_catalog_product_new>
+        <reference name="content">
+            <block type="mercuriel_autofill/adminhtml_select" name="my_button_url" template="mercuriel/select.phtml"
+                   before="product_edit"/>
+        </reference>
+        <reference name="js">
+            <block type="mercuriel_autofill/adminhtml_product_js" template="mercuriel/js.phtml" name="autofill_js"/>
+        </reference>
+    </adminhtml_catalog_product_new>
 </layout>

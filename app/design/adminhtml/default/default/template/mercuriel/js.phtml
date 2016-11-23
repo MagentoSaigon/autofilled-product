@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    var array = <?=$this->getAutofillJsArray()?>;
+
+function loadDoc(){
+    var data = array[document.getElementById('autofill_set').value];
+    for(var key in data)
+    {
+        if(data[key] != null && document.getElementById(key) != null) {
+            document.getElementById(key).value = data[key];
+        }
+    }
+
+}
+</script>

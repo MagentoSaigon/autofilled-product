@@ -25,9 +25,9 @@
             <mercuriel_autofill_resource>
                 <class>Mercuriel_Autofill_Model_Resource</class>
                 <entities>
-                    <autofill_group>
-                        <table>autofill_group</table>
-                    </autofill_group>
+                    <autofill_set>
+                        <table>autofill_set</table>
+                    </autofill_set>
                     <autofill_value>
                         <table>autofill_value</table>
                     </autofill_value>
