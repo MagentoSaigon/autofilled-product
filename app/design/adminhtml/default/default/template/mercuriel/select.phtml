@@ -1,7 +1,8 @@
+<?php if($this->getRequest()->getParam('set')):?>
 <table>
 <tr><td class="label"><label for="autofill_set">Select Autofill Set</label>
     <td class="value"><select id="autofill_set" name="autofill" onchange="loadDoc()">
-    <option value=""></option>
+    <option value="">Select your autofill set here</option>
     <?php $autofillSets = $this->getAttributeSet($this->getRequest()->getParam('set'));?>
     <?php if($autofillSets):?>
     <?php foreach($autofillSets as $autofillSet):?>
@@ -10,3 +11,4 @@
     <?php endif;?>
 </select>
     </table>
+<?php endif;?>

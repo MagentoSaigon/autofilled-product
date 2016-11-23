@@ -38,6 +38,9 @@ class Mercuriel_Autofill_Block_Adminhtml_Product_Js extends Mage_Core_Block_Temp
             $flag2 = false;
             foreach($autofillValueData as $key => $value){
                 if($flag2){$string .= ',';}
+                $value = str_replace(PHP_EOL, '\r\n', $value);
+                $value = str_replace('\\r','\ \r', $value ); //
+//                $value = str_replace('\n', '\\r\\n', $value); //Deal with the problem of line seperator in javascript
                 $string .= '"'.$key.'"'.":".'"'.$value.'"';
                 $flag2 = true;
             }

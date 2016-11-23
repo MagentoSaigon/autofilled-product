@@ -65,8 +65,16 @@ class Mercuriel_Autofill_Block_Adminhtml_Autofill_Edit_Form extends Mage_Adminht
                     case 'price':
                     case 'datetime':
                     case 'date':
-                    case 'weight':
                     case '':
+                        break;
+                    case 'weight':
+                        $a = array(
+                            'label' => Mage::helper('mercuriel_autofill')->__($autofillValue['frontend_label']),
+                            'class' => '',
+                            'name' => $autofillValue['attribute_code']
+                        );
+//                        $a['values'] =  Mage::getSingleton('eav/config')->getAttribute(Mage_Catalog_Model_Product::ENTITY, $autofillValue['attribute_code'])->getSource()->getAllOptions();
+                        $fieldset1->addField($autofillValue['attribute_code'], 'text', $a);
                         break;
                     case 'select':
                         $a = array(

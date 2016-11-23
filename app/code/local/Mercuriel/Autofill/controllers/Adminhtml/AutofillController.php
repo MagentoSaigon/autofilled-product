@@ -72,11 +72,12 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
                                 ->addFieldToFilter('attribute_id', $valueData['attribute_id'])
                                 ->getFirstItem();
 
-
                             if($item && $item->getId()){
+
                                 Mage::getModel('mercuriel_autofill/autofillValue')
                                     ->load($item->getId())
                                     ->setAttributeId($valueData['attribute_id'])
+                                    ->setValue($valueData['value'])
                                     ->save();
                             }
                             else {
