@@ -90,15 +90,20 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
 
                             $valueData['attribute_id'] = Mage::helper('mercuriel_autofill')->getAttributeId($key, $data['attribute_set_id']);
                             $valueData['value'] = $value;
+
                             $item = Mage::getResourceModel('mercuriel_autofill/autofillValue_collection')
                                 ->addFieldToFilter('autofill_set_id', $id)
                                 ->addFieldToFilter('attribute_id', $valueData['attribute_id'])
                                 ->getFirstItem();
 
+
 //                            die(Mage::helper('mercuriel_autofill')->getAttributeId($key, $data['attribute_set_id']));
-                            if($item){
+                            if($item && $item->getId()){
 
 //                                die($item->getId());
+//                                if($key == 'sku'){
+//                                    die(var_dump($item->getId()));
+//                                }
                                 Mage::getModel('mercuriel_autofill/autofillValue')
                                     ->load($item->getId())
                                     ->setAttributeId($valueData['attribute_id'])
@@ -106,6 +111,7 @@ class Mercuriel_Autofill_Adminhtml_AutofillController extends Mage_Adminhtml_Con
                                     ->save();
                             }
                             else {
+
                                 Mage::getModel('mercuriel_autofill/autofillValue')->setData($valueData)->save();
                             }
                         }

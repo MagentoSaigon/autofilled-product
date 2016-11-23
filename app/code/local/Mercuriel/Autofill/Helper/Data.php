@@ -48,7 +48,7 @@ class Mercuriel_Autofill_Helper_Data extends Mage_Core_Helper_Abstract {
             ->join(array('attribute'=>'eav_attribute'), 'entity_attribute.attribute_id = attribute.attribute_id')
             ->where('frontend_input is not null')
             ->where('frontend_label is not null')
-            ->where('backend_type != ?', 'static') //WE have to filter the unnecessary values
+//                ->where('backend_type != ? or attribute_code = ?', 'static', 'sku') //WE have to filter the unnecessary values
             ->query()->fetchAll();
         return $data;
     }

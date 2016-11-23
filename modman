@@ -1,3 +1,4 @@
 app/code/local/Mercuriel/* app/code/local/Mercuriel
 app/design/adminhtml/default/default/layout/* app/design/adminhtml/default/default/layout/
 app/etc/modules/* app/etc/modules/
+app/design/adminhtm/default/default/template/mercuriel app/design/adminhtm/default/default/template/mercuriel
