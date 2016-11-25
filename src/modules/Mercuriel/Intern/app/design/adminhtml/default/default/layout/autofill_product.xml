@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<config>
+    <default>
+        <reference name="head">
+            <action method="addJs">
+                <script>autofill/autofill.js</script>
+            </action>
+        </reference>
+    </default>
+    <adminhtml_autofill_index>
+        <reference name="content">
+            <block type="autofill_product/adminhtml_autofill" name="autofill_index"></block>
+        </reference>
+    </adminhtml_autofill_index>
+
+    <adminhtml_autofill_edit>
+        <reference name="content">
+            <block type="autofill_product/adminhtml_autofill_edit" name="autofill_edit"></block>
+        </reference>
+    </adminhtml_autofill_edit>
+    <adminhtml_catalog_product_new>
+        <reference name="content">
+            <block type="autofill_product/adminhtml_dropdown" name="autofill_dropdown" before="product_edit"
+                   template="Autofill/dropdown.phtml"></block>
+        </reference>
+        <reference name="content">
+            <block type="autofill_product/adminhtml_dropdown" name="autofill_js"
+                   template="Autofill/jsAutofill.phtml"></block>
+        </reference>
+    </adminhtml_catalog_product_new>
+
+</config>

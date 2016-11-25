@@ -1,0 +1,13 @@
+{
+  "name":"mercuriel/autofill",
+  "type":"magento-module",
+  "author":[
+    {
+      "name":"Phong Phan",
+      "email":"pthphong2103@gmail.com"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}
