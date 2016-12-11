@@ -1,0 +1,28 @@
+<?php
+
+if($this->getRequest()->getParam('set') != NULL)
+{
+    $set_id = $this->getRequest()->getParam('set');
+
+    $attributeCollection = $this->getAttributeInfo($set_id);
+
+}
+?>
+<?php
+    if($this->getRequest()->getParam('set') != NULL):
+?>
+Select the Autofill-set :
+<select name="attribute_set_collection" id="attribute_set_collection">
+    <option value="0">Select Your AutoFill Name</option>
+    <?php
+    foreach($attributeCollection as $attribute_info):
+    ?>
+    <option value="<?= $attribute_info->getId() ?>"><?= $attribute_info->getNameInfo() ?></option>
+    <?php
+    endforeach;
+    ?>
+</select>
+<?php
+    endif;
+?>
+

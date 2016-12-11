@@ -1,0 +1,24 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<?php $key = Mage::getSingleton('core/session')->getFormKey(); ?>
+<script>
+
+    var $j = jQuery.noConflict();
+    $j(document).ready(function(){
+        $j('#attribute_set_collection').on('change',function(){
+            var info_id = $j(this).val();
+            $j.ajax({
+                type: "POST",
+                url: '<?php echo Mage::getUrl('adminhtml/autofill/ajax')?>',
+                data: {info_id: info_id,form_key:'<?php echo $key ?>'},
+                success: function( data ) {
+                    $j.each(JSON.parse(data),function(key,value){
+                        $j('#'+key).val(value);
+                    });
+                }
+            });
+        });
+    });
+
+</script>
+
+
