@@ -1,4 +1,0 @@
-bin/vendor/*
-src/magento/*
-.idea/*
-bin/composer.lock
